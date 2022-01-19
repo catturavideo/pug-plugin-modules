@@ -20,7 +20,7 @@ module.exports = function(options) {
           file.root = `.${file.root}`;
           basedir = pugOptions.basedir;
         }
-        resolvePath = path.format(file);
+        resolvePath = path.posix.format(file);
       }
 
       return resolve.sync(
